@@ -22,9 +22,13 @@ class Dal {
      */
     private function getPdo() {
         try {
-            $pdo = new \PDO('pgsql:dbname=development;host=localhost;',
+         /*   $pdo = new \PDO('pgsql:dbname=development;host=localhost;',
                             'postgres',
                             '1Qaaal123');
+          * 
+          */
+      //  new PDO("sqlsrv:Server=YouAddress;Database=YourDatabase", "Username", "Password");
+        $pdo = new \PDO("sqlsrv:Server=.;Database=BILSANET", "sa", "12345678oki");
             return $pdo;
         } catch (PDOException $e) {
             return false;
