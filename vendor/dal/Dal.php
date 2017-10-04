@@ -28,7 +28,11 @@ class Dal {
           * 
           */
       //  new PDO("sqlsrv:Server=YouAddress;Database=YourDatabase", "Username", "Password");
-        $pdo = new \PDO("sqlsrv:Server=.;Database=BILSANET", "sa", "12345678oki");
+          $pdo = new \PDO("sqlsrv:Server=ZZX;Database=BILSANET", 
+                            "sa", 
+                            "12345678oki"
+                            );
+     
             return $pdo;
         } catch (PDOException $e) {
             return false;
@@ -51,7 +55,7 @@ class Dal {
             $pdo = $this->getPdo();
             
             $sql = "              
-                    SELECT firm_id AS firm_id, 1=1 AS control FROM (
+                    SELECT 1 AS firm_id, 1=1 AS control FROM (
                             SELECT a.firm_id ,
                              CRYPT(sf_private_key_value,CONCAT('_J9..',REPLACE('".$companyPublicKey."','*','/'))) = CONCAT('_J9..',REPLACE('".$companyPublicKey."','*','/')) as cpk 
                             FROM info_firm_keys a                                                        
@@ -131,22 +135,25 @@ class Dal {
         
         try {
             $pdo = $this->getPdo();          
-            $sql = "              
+            $sql =            
+             $sql = "              
                     SELECT a.public_key =  '".$params['pk']."'
                     FROM act_session a                  
                     WHERE a.public_key =   '".$params['pk']."'
-                    ";           
-            
+                    ";  
+         
+                    
             $statement = $pdo->prepare($sql);            
             //echo debugPDO($sql, $params);
             $statement->execute();
             $result = $statement->fetchAll(\PDO::FETCH_ASSOC);
             $errorInfo = $statement->errorInfo();
+         
             if ($errorInfo[0] != "00000" && $errorInfo[1] != NULL && $errorInfo[2] != NULL)
                 throw new \PDOException($errorInfo[0]);
             return array("found" => true, "errorInfo" => $errorInfo, "resultSet" => $result);
         } catch (\PDOException $e /* Exception $e */) {
-            $pdo->rollback();
+         
             return array("found" => false, "errorInfo" => $e->getMessage());
         }
     }

@@ -20,6 +20,23 @@ class SlimHmacProxy extends \Proxy\Proxy {
     protected $redirectMap = array('getReports_test' => 'restApiDefaultCall',
                                     'getDynamicForm_test' => 'restApiDefaultCall',
 
+        
+        
+         //** MblLogin ----------------------
+                                    'gnlKullaniciMebKoduFindByTcKimlikNo_mbllogin' => 'restApiDefaultCall',
+                                    'gnlKullaniciFindForLoginByTcKimlikNo_mbllogin' => 'restApiDefaultCall',
+                                    'mobilfirstdata_mbllogin' => 'restApiDefaultCall',
+                                    'mobilMenu_mbllogin' => 'restApiDefaultCall',
+                                    'gnlKisiOkulListesi_mbllogin' => 'restApiDefaultCall',
+                                    'ogretmenDersProgrami_mbllogin' => 'restApiDefaultCall',
+                                    'ogretmenDersProgramiDersSaatleri_mbllogin' => 'restApiDefaultCall',
+                                    'ogretmenDersPrgDersSaatleriOgrencileri_mbllogin' => 'restApiDefaultCall',
+                                    'ogretmenVeliRandevulari_mbllogin' => 'restApiDefaultCall',
+        
+        
+        //**---- MblLogin -------------------        
+        
+        
         //** leftnavigation ----------------------
                                     'pkDelete_leftnavigation' => 'restApiDefaultCall',
                                     'pkGetAll_leftnavigation' => 'restApiDefaultCall',
@@ -46,11 +63,11 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'pkInsertUrgePerson_infoUsers' => 'restApiDefaultCall',
                                     'setPersonPassword_infoUsers' => 'restApiDefaultCall',
         
-            'pkUpdateConsUserConfirmAct_infoUsers' => 'restApiDefaultCall',
-            'pkFillUsersProfileInformationGuest_infoUsers' => 'restApiDefaultCall',
-            'pkFillUsersProfileInformation_infoUsers' => 'restApiDefaultCall',
-            'pkGetUserShortInformation_infoUsers' => 'restApiDefaultCall',
-        
+                                    'pkUpdateConsUserConfirmAct_infoUsers' => 'restApiDefaultCall',
+                                    'pkFillUsersProfileInformationGuest_infoUsers' => 'restApiDefaultCall',
+                                    'pkFillUsersProfileInformation_infoUsers' => 'restApiDefaultCall',
+                                    'pkGetUserShortInformation_infoUsers' => 'restApiDefaultCall',
+
         
         
         
@@ -1192,6 +1209,10 @@ class SlimHmacProxy extends \Proxy\Proxy {
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
         }   else if (substr($endPointFunction, -11) == '_sysSectors') {
             $this->setRestApiEndPoint('syssectors.php/');
+            //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
+            $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
+        }   else if (substr($endPointFunction, -9) == '_mbllogin') {
+            $this->setRestApiEndPoint('mbllogin.php/');
             //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
         }
