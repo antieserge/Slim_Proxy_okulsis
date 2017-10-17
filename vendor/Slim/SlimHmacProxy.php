@@ -38,7 +38,8 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'Kurumyoneticisisubelistesi_mbllogin' => 'restApiDefaultCall',
                                     'Kysubeogrencilistesi_mbllogin' => 'restApiDefaultCall',
                                     'KySubeOgrenciDersListesi_mbllogin' => 'restApiDefaultCall',
-        
+                                    'Ogretmensinavlistesi_mbllogin' => 'restApiDefaultCall',
+                                    'Yakinisinavlistesi_mbllogin' => 'restApiDefaultCall',
         
         
         //**---- MblLogin -------------------        
