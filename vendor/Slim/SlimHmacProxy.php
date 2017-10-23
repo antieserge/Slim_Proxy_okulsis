@@ -45,6 +45,20 @@ class SlimHmacProxy extends \Proxy\Proxy {
         //**---- MblLogin -------------------        
         
         
+        
+          
+         //** MobilSettings ----------------------
+                                    'mobilUrlData_mobilsettings' => 'restApiDefaultCall',
+                                   
+                                
+        
+        //**---- MobilSettings -------------------        
+        
+        
+        
+        
+        
+        
         //** leftnavigation ----------------------
                                     'pkDelete_leftnavigation' => 'restApiDefaultCall',
                                     'pkGetAll_leftnavigation' => 'restApiDefaultCall',
@@ -1221,6 +1235,10 @@ class SlimHmacProxy extends \Proxy\Proxy {
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
         }   else if (substr($endPointFunction, -9) == '_mbllogin') {
             $this->setRestApiEndPoint('mbllogin.php/');
+            //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
+            $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
+        }   else if (substr($endPointFunction, -14) == '_mobilsettings') {
+            $this->setRestApiEndPoint('mobilsettings.php/');
             //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
         }
