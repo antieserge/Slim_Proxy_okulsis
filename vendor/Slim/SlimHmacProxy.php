@@ -40,6 +40,20 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'KySubeOgrenciDersListesi_mbllogin' => 'restApiDefaultCall',
                                     'Ogretmensinavlistesi_mbllogin' => 'restApiDefaultCall',
                                     'Yakinisinavlistesi_mbllogin' => 'restApiDefaultCall',
+                                    'KurumYoneticisiSinavListesi_mbllogin' => 'restApiDefaultCall',
+                                    'GelenMesajListesi_mbllogin' => 'restApiDefaultCall',
+                                    'OdevListesiOgretmen_mbllogin' => 'restApiDefaultCall',
+                                    'OdevListesiKurumYoneticisi_mbllogin' => 'restApiDefaultCall',
+                                    'OgretmenDersProgramiListesi_mbllogin' => 'restApiDefaultCall',
+                                    'OgrenciVeYakiniDersProgramiListesi_mbllogin' => 'restApiDefaultCall',
+                                    'KurumPersoneliSinifListesi_mbllogin' => 'restApiDefaultCall',
+                                    'KurumPersoneliDersProgramiListesi_mbllogin' => 'restApiDefaultCall', 
+                                    'SinifSeviyeleriCombo_mbllogin' => 'restApiDefaultCall',
+                                    'SinifSeviyeleri_mbllogin' => 'restApiDefaultCall',
+                                    'GnlProfil_mbllogin' => 'restApiDefaultCall', 
+                                    'KurumVePersonelDevamsizlik_mbllogin' => 'restApiDefaultCall',
+                                    'GelenMesajDetay_mbllogin' => 'restApiDefaultCall',
+                                    'OdevListesiOgrenciveYakin_mbllogin' => 'restApiDefaultCall',
         
         
         //**---- MblLogin -------------------        
