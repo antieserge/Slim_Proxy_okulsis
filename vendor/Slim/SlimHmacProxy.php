@@ -54,6 +54,10 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'KurumVePersonelDevamsizlik_mbllogin' => 'restApiDefaultCall',
                                     'GelenMesajDetay_mbllogin' => 'restApiDefaultCall',
                                     'OdevListesiOgrenciveYakin_mbllogin' => 'restApiDefaultCall',
+                                    'MuhBorcluSozlesmeleri_mbllogin' => 'restApiDefaultCall',
+                                    'MuhBorcluOdemePlani_mbllogin' => 'restApiDefaultCall',
+                                    'DashboarddataDersProgrami_mbllogin' => 'restApiDefaultCall',
+        
         
         
         //**---- MblLogin -------------------        
@@ -63,7 +67,8 @@ class SlimHmacProxy extends \Proxy\Proxy {
           
          //** MobilSettings ----------------------
                                     'mobilUrlData_mobilsettings' => 'restApiDefaultCall',
-                                   
+                                    'MobilwsdlEncryptPassword_mobilsettings' => 'restApiDefaultCall',
+                                    'MobilwsdlDecryptPassword_mobilsettings' => 'restApiDefaultCall',
                                 
         
         //**---- MobilSettings -------------------        
