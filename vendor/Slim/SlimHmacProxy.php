@@ -57,6 +57,9 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'MuhBorcluSozlesmeleri_mbllogin' => 'restApiDefaultCall',
                                     'MuhBorcluOdemePlani_mbllogin' => 'restApiDefaultCall',
                                     'DashboarddataDersProgrami_mbllogin' => 'restApiDefaultCall',
+                                    'DashboardIconCounts_mbllogin' => 'restApiDefaultCall',
+                                    'SendMesajDefault_mbllogin' => 'restApiDefaultCall',
+                                    'GidenMesajListesi_mbllogin' => 'restApiDefaultCall',
         
         
         
