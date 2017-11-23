@@ -60,6 +60,23 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'DashboardIconCounts_mbllogin' => 'restApiDefaultCall',
                                     'SendMesajDefault_mbllogin' => 'restApiDefaultCall',
                                     'GidenMesajListesi_mbllogin' => 'restApiDefaultCall',
+                                    'MuhYapilacakTahsilatlarA_mbllogin' => 'restApiDefaultCall',
+                                    'MuhYapilacakTahsilatlarB_mbllogin' => 'restApiDefaultCall',
+                                    'MuhYapilacakTahsilatlarC_mbllogin' => 'restApiDefaultCall',
+                                    'OdevTipleri_mbllogin' => 'restApiDefaultCall',
+                                    'OdevAtama_mbllogin' => 'restApiDefaultCall',
+                                    'OgrenciKarnesi_mbllogin' => 'restApiDefaultCall',
+                                    'MsjGonderilecekRoller_mbllogin' => 'restApiDefaultCall',
+                                    'MsjIcinOkulListesi_mbllogin' => 'restApiDefaultCall',
+                                    'MsjIcinOkuldakiSinifListesi_mbllogin' => 'restApiDefaultCall',
+                                    'MsjIcinSinifOgrenciVeliListesi_mbllogin' => 'restApiDefaultCall',
+                                    'MsjIcinPersonelListesi_mbllogin' => 'restApiDefaultCall', 
+                                    'MsjIcinOgretmenListesi_mbllogin' => 'restApiDefaultCall',
+                                    'Msjcombo1_mbllogin' => 'restApiDefaultCall',
+                                    'Msjcombo2_mbllogin' => 'restApiDefaultCall',
+                                    'Msjcombo3_mbllogin' => 'restApiDefaultCall',
+                                    'Msjcombo4_mbllogin' => 'restApiDefaultCall',
+                                    'MesajTipleri_mbllogin' => 'restApiDefaultCall',
         
         
         
