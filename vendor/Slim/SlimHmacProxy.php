@@ -77,7 +77,9 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'Msjcombo3_mbllogin' => 'restApiDefaultCall',
                                     'Msjcombo4_mbllogin' => 'restApiDefaultCall',
                                     'MesajTipleri_mbllogin' => 'restApiDefaultCall',
-        
+                                    'Ogretmensubelistesi_mbllogin' => 'restApiDefaultCall',
+                                    'OgretmenSinavDersleriListesi_mbllogin' => 'restApiDefaultCall',
+                                    'OgretmenSinavaGirenSubeler_mbllogin' => 'restApiDefaultCall',
         
         
         //**---- MblLogin -------------------        
@@ -159,7 +161,11 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'pkUpdate_syslanguage' => 'restApiDefaultCall',
                                     'pkFillGrid_syslanguage' => 'restApiDefaultCall',
                                     'fillComboBox_syslanguage' => 'restApiDefaultCall', 
-                                    'pkFillLanguageDdList_syslanguage' => 'restApiDefaultCall',                                    
+                                    'pkFillLanguageDdList_syslanguage' => 'restApiDefaultCall',  
+         
+                                    'fillComboBoxTsql_syslanguage' => 'restApiDefaultCall', 
+        
+        
          //**---- syslanguage -------------------
           //** sysborough ----------------------
                                     'pkDelete_sysborough' => 'restApiDefaultCall',
