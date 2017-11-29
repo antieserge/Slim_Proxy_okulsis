@@ -80,6 +80,13 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'Ogretmensubelistesi_mbllogin' => 'restApiDefaultCall',
                                     'OgretmenSinavDersleriListesi_mbllogin' => 'restApiDefaultCall',
                                     'OgretmenSinavaGirenSubeler_mbllogin' => 'restApiDefaultCall',
+                                    'KyOgretmenOdevListeleri_mbllogin' => 'restApiDefaultCall',
+                                    'OgrenciVeliIcinOgretmenListesi_mbllogin' => 'restApiDefaultCall',
+                                    'OgrencininAldigiNotlar_mbllogin' => 'restApiDefaultCall',
+                                    'OgrencilerinAldigiNotlarSinavBazli_mbllogin' => 'restApiDefaultCall',
+                                    'OgretmenSinavSorulariKDK_mbllogin' => 'restApiDefaultCall',
+        
+        
         
         
         //**---- MblLogin -------------------        
