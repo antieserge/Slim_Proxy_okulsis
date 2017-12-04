@@ -90,8 +90,8 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'TopluOgrenciCevap_mbllogin' => 'restApiDefaultCall',
                                     'OgrenciSinavitapcikKaydet_mbllogin' => 'restApiDefaultCall',
                                     'OgrenciSinaviSonuclariOnay_mbllogin' => 'restApiDefaultCall',
-        
-         
+                                    'SinavdaKullanilanKitaplar_mbllogin' => 'restApiDefaultCall', 
+                                    'OgrenciSinaviSonuclariKaydet_mbllogin' => 'restApiDefaultCall',
         
         //**---- MblLogin -------------------        
         
