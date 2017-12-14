@@ -93,6 +93,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'SinavdaKullanilanKitaplar_mbllogin' => 'restApiDefaultCall', 
                                     'OgrenciSinaviSonuclariKaydet_mbllogin' => 'restApiDefaultCall',
                                     'OgrencininSinavlistesi_mbllogin' => 'restApiDefaultCall',
+                                    'OgretmenDersProgramiCombo_mbllogin' => 'restApiDefaultCall',
         
         
         
