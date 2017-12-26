@@ -891,6 +891,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
          * @author Okan CIRAN
          * @since version 0.3 06/01/2016
          */
+        $logArray[] = 'X-IP: '. $this->hmacObj->getRealIp() . '';
         if($this->isServicePkRequired) {
             //print_r('--isServicePkRequired--');
             $logArray[] = 'X-Public: ' . $this->hmacObj->getPublicKey() . '';
@@ -898,7 +899,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
             $logArray[] = 'X-Nonce:' . $this->hmacObj->getNonce();
             $logArray[] = 'X-TimeStamp:' . $this->hmacObj->setTimeStamp($this->encryptClass
                                                          ->encrypt('' . time() . ''));
-            $logArray[] = 'X-IP: '. $this->hmacObj->getRealIp() . '';
+           
             /*curl_setopt($chLocal, CURLOPT_HTTPHEADER, array(
                 'X-Public: ' . $this->hmacObj->getPublicKey() . '',
                 'X-Hash: ' . $this->hmacObj->getHash() . '',
@@ -927,13 +928,14 @@ class SlimHmacProxy extends \Proxy\Proxy {
          * @since version 0.3 27/01/2016
          * @todo after detailed test curl obj will be removed
          */
+        $logArray[] = 'X-IP: '. $this->hmacObj->getRealIp() . '';
         if($this->isServicePkTempRequired) {
             $logArray[] = 'X-Public-Temp: ' . $this->hmacObj->getPublicKey() . '';
             $logArray[] = 'X-Hash-Temp: ' . $this->hmacObj->getHash() . '';
             $logArray[] = 'X-Nonce:' . $this->hmacObj->getNonce();
             $logArray[] = 'X-TimeStamp:' . $this->hmacObj->setTimeStamp($this->encryptClass
                                                          ->encrypt('' . time() . ''));
-            $logArray[] = 'X-IP: '. $this->hmacObj->getRealIp() . '';
+            
             
             /*curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                 'X-Public-Temp: ' . $this->hmacObj->getPublicKey() . '',
@@ -955,6 +957,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
      * @throws Exception
      */
     private function publicKeyTempProcessControler($params) {
+        $this->hmacObj->setRealIp(); 
         if($this->isServicePkTempRequired) {
             /**
             * getting private key temp due to public key temp
@@ -982,7 +985,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
             } else {
                 $this->hmacObj->setPublicKey($params['pktemp']);
             }
-            $this->hmacObj->setRealIp(); 
+            
             //$this->hmacObj->setPrivateKey('e249c439ed7697df2a4b045d97d4b9b7e1854c3ff8dd668c779013653913572e');
             $this->hmacObj->setPrivateKey($resultSetTemp['resultSet'][0]['sf_private_key_value_temp']);
             $this->hmacObj->setRequestParams($this->getRequestParamsWithoutPublicKeyTemp());
@@ -1006,6 +1009,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
      */
     private function publicKeyProcessControler($params) {
         $resultSet;
+        $this->hmacObj->setRealIp();
         if($this->isServicePkRequired) {
             /**
             * getting private key due to public key
@@ -1036,7 +1040,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
             } else {
                 $this->hmacObj->setPublicKey($params['pk']);
             }
-            $this->hmacObj->setRealIp(); 
+             
             //$this->hmacObj->setPrivateKey('e249c439ed7697df2a4b045d97d4b9b7e1854c3ff8dd668c779013653913572e');
             $this->hmacObj->setPrivateKey($resultSet['resultSet'][0]['sf_private_key_value']);
             $this->hmacObj->setRequestParams($this->getRequestParamsWithoutPublicKey());
