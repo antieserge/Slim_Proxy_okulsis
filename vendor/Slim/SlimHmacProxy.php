@@ -957,7 +957,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
      * @throws Exception
      */
     private function publicKeyTempProcessControler($params) {
-        $this->hmacObj->setRealIp(); 
+       // $this->hmacObj->setRealIp(); 
         if($this->isServicePkTempRequired) {
             /**
             * getting private key temp due to public key temp
