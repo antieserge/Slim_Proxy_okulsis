@@ -928,7 +928,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
          * @since version 0.3 27/01/2016
          * @todo after detailed test curl obj will be removed
          */
-        $logArray[] = 'X-IP: '. $this->hmacObj->getRealIp() . '';
+      //  $logArray[] = 'X-IP: '. $this->hmacObj->getRealIp() . '';
         if($this->isServicePkTempRequired) {
             $logArray[] = 'X-Public-Temp: ' . $this->hmacObj->getPublicKey() . '';
             $logArray[] = 'X-Hash-Temp: ' . $this->hmacObj->getHash() . '';
@@ -957,7 +957,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
      * @throws Exception
      */
     private function publicKeyTempProcessControler($params) {
-       // $this->hmacObj->setRealIp(); 
+       $this->hmacObj->setRealIp(); 
         if($this->isServicePkTempRequired) {
             /**
             * getting private key temp due to public key temp
