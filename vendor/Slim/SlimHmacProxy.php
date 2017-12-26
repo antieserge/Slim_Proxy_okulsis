@@ -860,7 +860,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
 			
 			
             $logArray[] = 'X-InsertOperationLogged : true';
-		    $logArray[] = 'X-IP: ' . $ip['ip'] . '';
+            $logArray[] = 'X-IP: ' . $ip['ip'] . '';
 		//	$logArray[] = 'X-IP:'= $ip['ip'];
             //print_r('--isServicePkRequired--');
             /*curl_setopt($chLocal, CURLOPT_HTTPHEADER, array(
