@@ -852,7 +852,16 @@ class SlimHmacProxy extends \Proxy\Proxy {
         
         $logArray = array();
         if($this->isInsertOperationLogged) {
+			  $ip =  (array(
+					'ip' =>  \Utill\Env\serverVariables::getClientIpImp()  
+					));
+			 //   echo($ip['ip']);
+			
+			
+			
             $logArray[] = 'X-InsertOperationLogged : true';
+		    $logArray[] = 'X-IP: ' . $ip['ip'] . '';
+		//	$logArray[] = 'X-IP:'= $ip['ip'];
             //print_r('--isServicePkRequired--');
             /*curl_setopt($chLocal, CURLOPT_HTTPHEADER, array(
                 'X-Public: ' . $this->hmacObj->getPublicKey() . '',
@@ -1103,10 +1112,10 @@ class SlimHmacProxy extends \Proxy\Proxy {
             //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
         } else if (substr($endPointFunction, -12) == '_syslanguage') {
-            $this->setRestApiEndPoint('syslanguage.php/');
-            //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
+			 $this->setRestApiEndPoint('syslanguage.php/');
+            //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction); 
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
-        }else if (substr($endPointFunction, -11) == '_sysborough') {
+        }else if (substr($endPointFunction, -11) == '_sysborough') { 
             $this->setRestApiEndPoint('sysborough.php/');
             //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
