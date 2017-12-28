@@ -23,6 +23,8 @@ class Hmac {
     
     protected $timeStamp;
     
+    protected $DeviceType;
+    
     public function __construct() {
         
     }
@@ -137,7 +139,24 @@ class Hmac {
     public function getRealIp() {
         return $this->RealIp;
     }
+     public function setDeviceType($DeviceType = null) { 
+        if($DeviceType == null) {
+            $deviceKontrol = preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);  
+            if($deviceKontrol){
+                $this->DeviceType =  'Mobile';   
+            } else {
+                $this->DeviceType =  'PC';
+            }  
+        } else {
+            $this->DeviceType = $DeviceType;
+        }  
+        return $this->DeviceType;
+         
+    } 
     
+    public function getDeviceType() {
+        return $this->DeviceType;
+    }
     
     public function setPrivateKey($privateKey = null) {
         $this->privateKey = $privateKey;
