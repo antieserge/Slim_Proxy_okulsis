@@ -339,6 +339,8 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'fillPersonnelTypes_sysSpecificDefinitions' => 'restApiDefaultCall',
                                     'fillAddressTypes_sysSpecificDefinitions' => 'restApiDefaultCall',
                                     'fillSexTypes_sysSpecificDefinitions' => 'restApiDefaultCall',
+                                    'fillVarYokGecTypes_sysSpecificDefinitions' => 'restApiDefaultCall',
+        
          //**---- sysSpecificDefinitions -------------------    
          //** infoUsersCommunications ----------------------
                                     'pkDelete_infoUsersCommunications' => 'restApiDefaultCall',
