@@ -99,6 +99,9 @@ class SlimHmacProxy extends \Proxy\Proxy {
                     /** ---------rpt  */ 
                      
                                     'OgrenciSinavDetayRpt_mbllogin' => 'restApiDefaultCall',
+                                    'OgrenciSinavSonucListesiRpt_mbllogin' => 'restApiDefaultCall',
+        
+        
                     /*---------rpt */
 
         //**---- MblLogin -------------------        
