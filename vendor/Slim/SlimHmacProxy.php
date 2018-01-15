@@ -117,6 +117,14 @@ class SlimHmacProxy extends \Proxy\Proxy {
         
         //**---- MobilSettings -------------------        
         
+          //**---- mobileUserMessages -------------------   
+                            'GetSemesters_mobileusermessages' => 'restApiDefaultCall',
+        
+        
+        
+        
+          //**---- mobileUserMessages -------------------   
+        
         
         
         
@@ -1316,6 +1324,10 @@ class SlimHmacProxy extends \Proxy\Proxy {
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
         }   else if (substr($endPointFunction, -14) == '_mobilsettings') {
             $this->setRestApiEndPoint('mobilsettings.php/');
+            //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
+            $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
+        }   else if (substr($endPointFunction, -14) == '_mobileusermessages') {
+            $this->setRestApiEndPoint('mobileusermessages.php/');
             //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
         }
