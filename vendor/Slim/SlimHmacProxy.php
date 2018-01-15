@@ -1326,7 +1326,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
             $this->setRestApiEndPoint('mobilsettings.php/');
             //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
-        }   else if (substr($endPointFunction, -14) == '_mobileusermessages') {
+        }   else if (substr($endPointFunction, -19) == '_mobileusermessages') {
             $this->setRestApiEndPoint('mobileusermessages.php/');
             //    print_r($this->restApiBaseUrl.$this->restApiEndPoint.$this->restApiEndPointFunction);
             $this->setRestApiFullPathUrl($this->restApiBaseUrl . $this->restApiEndPoint . $this->restApiEndPointFunction);
