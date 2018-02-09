@@ -94,6 +94,7 @@ class SlimHmacProxy extends \Proxy\Proxy {
                                     'OgrenciSinaviSonuclariKaydet_mbllogin' => 'restApiDefaultCall',
                                     'OgrencininSinavlistesi_mbllogin' => 'restApiDefaultCall',
                                     'OgretmenProgramindakiDersler_mbllogin' => 'restApiDefaultCall',
+                                    'OgretmenProgramindakiDerslerv2_mbllogin' => 'restApiDefaultCall',
         
         
                     /** ---------rpt  */ 
